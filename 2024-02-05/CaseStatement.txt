@@ -1,0 +1,33 @@
+DECLARE DayNum : INTEGER
+
+OUTPUT "Please enter a number from 1 - 7"
+INPUT DayNum
+
+IF DayNum = 1 THEN
+    OUTPUT DayNum, " is Sunday"
+ELSE IF DayNum = 2 THEN
+    OUTPUT DayNum, " is Monday"
+ELSE IF DayNum = 2 THEN
+    OUTPUT DayNum, " is Tuesday"
+ELSE IF DayNum = 2 THEN
+    OUTPUT DayNum, " is Wednesday"
+ELSE IF DayNum = 2 THEN
+    OUTPUT DayNum, " is Thursday"
+ELSE IF DayNum = 2 THEN
+    OUTPUT DayNum, " is Friday"
+ELSE IF DayNum = 2 THEN
+    OUTPUT DayNum, " is Saturday"
+ELSE
+    OUTPUT DayNum, " is not within the range!"
+ENDIF
+
+CASE DayNum OF
+    1 : OUTPUT DayNum, " is Sunday"
+    2 : OUTPUT DayNum, " is Monday"
+    3 : OUTPUT DayNum, " is Tuesday"
+    4 : OUTPUT DayNum, " is Wednesday"
+    5 : OUTPUT DayNum, " is Thursday"
+    6 : OUTPUT DayNum, " is Friday"
+    7 : OUTPUT DayNum, " is Saturday"
+    OTHERWISE OUTPUT "Invalid Number"
+ENDCASE

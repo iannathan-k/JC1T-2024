@@ -1,0 +1,22 @@
+DECLARE NumA : INTEGER
+DECLARE NumB : INTEGER
+DECLARE NumC : INTEGER
+
+OUTPUT "Please enter num 1"
+INPUT NumA
+OUTPUT "Please enter num 2"
+INPUT NumB
+OUTPUT "Please enter num 3"
+INPUT NumC
+
+IF NumA > NumB THEN
+    IF NumA > NumC THEN
+        OUTPUT NumA, ", The first number is greatest"
+    ELSE
+        OUTPUT NumC, ", The third number is greatest"
+    ENDIF
+ELSE IF NumB > NumC THEN
+    OUTPUT NumB, ", The second number is greatest"
+ELSE
+    OUTPUT NumC, ", The third number is greatest"
+ENDIF

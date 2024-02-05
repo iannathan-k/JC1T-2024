@@ -1,0 +1,13 @@
+DECLARE NumA : INTEGER
+DECLARE NumB : INTEGER
+
+OUTPUT "Please enter num 1"
+INPUT NumA
+OUTPUT "Please enter num 2"
+INPUT NumB
+
+IF NumA > NumB THEN
+    OUTPUT NumA, ", The first number is greater!"
+ELSE
+    OUTPUT NumB, ", The second number is greater!"
+ENDIF

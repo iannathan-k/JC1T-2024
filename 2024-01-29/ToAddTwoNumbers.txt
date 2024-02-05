@@ -1,0 +1,27 @@
+DECLARE NumA : INTEGER
+DECLARE NumB : INTEGER
+DECLARE Sum : INTEGER
+DECLARE Quot : REAL
+DECLARE IntQuot : INTEGER
+DECLARE Rem : INTEGER
+DECLARE Diff : INTEGER
+DECLARE Prod : INTEGER
+
+OUTPUT "Input number 1: "
+INPUT NumA
+OUTPUT "Input number 2: "
+INPUT NumB
+
+Sum <-- NumA + NumB
+Quot <-- NumA / NumB
+IntQuot <-- DIV(NumA, NumB)
+Rem <-- MOD(NumA, NumB)
+Diff <-- NumA - NumB
+Prod <-- NumA * NumB
+
+OUTPUT "The sum is ", Sum
+OUTPUT "The quotient is ", Quot
+OUTPUT "The rounded quot is ", IntQuot
+OUTPUT "The remainder is ", Rem
+OUTPUT "The difference is ", Diff
+OUTPUT "The product is ", Prod
