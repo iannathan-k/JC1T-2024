@@ -1,0 +1,27 @@
+DECLARE StudentNames : ARRAY[0:9]
+DECLARE Name : STRING
+DECLARE SearchName : STRING
+DECLARE Index : INTEGER
+DECLARE Found : BOOLEAN
+
+FOR i <-- 0 TO 9
+    INPUT Name
+    StudentNames[i] <-- Name
+NEXT i
+
+FOR i <-- 0 TO 9
+    OUTPUT StudentNames[i]
+NEXT i
+
+OUTPUT "Please enter student to search"
+INPUT SearchName
+Found <-- FALSE
+Index <-- 0
+
+WHILE Found = FALSE AND Index < LENGTH(StudentNames)
+    IF StudentNames[Index] = SearchName THEN
+        Found = TRUE
+        OUTPUT "Student found at element number, ", Index
+    Index <-- Index + 1
+
+IF Found = FALSE THEN  

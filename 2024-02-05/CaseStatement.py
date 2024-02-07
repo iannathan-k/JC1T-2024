@@ -17,17 +17,12 @@ elif userDay == 7:
 else:
     print(str(userDay), "Invalid Number")
 
-day = {
-    1: "Sunday",
-    2: "Monday",
-    3: "Tuesday",
-    4: "Wednesday",
-    5: "Thursday",
-    6: "Friday",
-    7: "Saturday"
-}
-
-if userDay in day:
-    print(str(userDay), "is", day[userDay])
-else:
-    print("Number is not between 1 and 7!")
+match userDay:
+    case 1 : print(str(userDay), "is Sunday")
+    case 2 : print(str(userDay), "is Monday")
+    case 3 : print(str(userDay), "is Tuesday")
+    case 4 : print(str(userDay), "is Wednesday")
+    case 5 : print(str(userDay), "is Thursday")
+    case 6 : print(str(userDay), "is Friday")
+    case 7 : print(str(userDay), "is Saturday")
+    case _: print("Invalid Number")
