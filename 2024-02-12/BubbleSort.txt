@@ -1,0 +1,21 @@
+DECLARE Array : ARRAY[0:9] OF INTEGER
+DECLARE Counter : INTEGER
+DECLARE Temp : INTEGER
+DECLARE Swap : BOOLEAN
+
+Counter <-- LENGTH(Array)
+
+REPEAT
+
+    Swap <-- FALSE
+
+    FOR i <-- 0 TO Counter
+        IF Array[i] > Array[i + 1] THEN
+            Temp <-- Array[i]
+            Array[i] <-- Array[i + 1]
+            Array[i + 1] <-- Temp
+            Swap <-- TRUE
+
+    Counter <-- Counter - 1
+
+UNTIL Counter = 0 OR Swap = FALSE
