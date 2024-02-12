@@ -1,0 +1,30 @@
+DECLARE Sum : INTEGER
+DECLARE Num : INTEGER
+DECLARE Counter : INTEGER
+
+Sum <-- 0
+For i <-- 0 TO 9
+    INPUT Num
+    Sum <-- Sum + Num
+NEXT i
+
+OUTPUT "sum is ", Sum
+
+Sum <-- 0
+Counter <-- 0
+WHILE Counter < 10
+    INPUT Num
+    Sum <-- Sum + Num
+    Counter <-- Counter + 1
+ENDWHILE
+
+OUTPUT "sum is ", Sum
+
+Sum <-- 0
+INPUT Num
+WHILE Num <> -999
+    IF Num > 0
+        Sum <-- Sum + Num
+    ENDIF
+    INPUT Num
+ENDWHILE
