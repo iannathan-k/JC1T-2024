@@ -1,6 +1,8 @@
 Array = [9, 8, 7, 6, 5, 4, 3, 2, 1]
 Counter = len(Array) - 1
 
+# fake repeat until loop
+
 while True:
 
     Swap = False
