@@ -1,0 +1,29 @@
+FUNCTION addTwoNumbers(num1 : INTEGER, num2 : INTEGER) RETURNS INTEGER
+    DECLARE sum : INTEGER
+    sum <-- num1 + num2
+    RETURN sum
+ENDFUNCTION
+
+DECLARE firstNum : INTEGER
+DECLARE secondNum : INTEGER
+
+OUTPUT "Enter first num: "
+INPUT firstNum
+OUTPUT "Enter second num: "
+INPUT secondNum
+
+tempSum = addTwoNumbers(firstNum, secondNum)
+print("The sum of ", firstNum, " and ", secondNum, " is, ", tempSum)
+
+
+
+FUNCTION fact(num : INTEGER) RETURNS INTEGER
+    DECLARE prod : INTEGER
+    prod <-- 1
+    FOR i <-- 1 TO num
+        prod = prod * i
+    NEXT i
+    RETURN prod
+ENDFUNCTION
+
+tempProd = fact(5)

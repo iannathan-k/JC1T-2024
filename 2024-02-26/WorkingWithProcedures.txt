@@ -1,0 +1,30 @@
+PROCEDURE printMyName()
+    OUTPUT "My name is Ian"
+ENDPROCEDURE
+
+CALL printMyName()
+
+
+
+PROCEDURE sayHello(name : STRING)
+    OUTPUT "Hello, ", name
+ENDPROCEDURE
+
+CALL sayHello("Ian")
+
+
+
+PROCEDURE addTwoNumbers(num1 : INTEGER, num2 : INTEGER)
+    DECLARE sum : INTEGER
+    sum <-- num1 + num2
+    OUTPUT "The sum of ", num1, " and ", num2, " is ", sum
+ENDPROCEDURE
+
+DECLARE firstNum : INTEGER
+DECLARE secondNum : INTEGER
+OUTPUT "Please enter the first num: "
+INPUT firstNum
+OUTPUT "Please enter the second num: "
+INPUT secondNum
+
+CALL addTwoNumbers(firstNum, secondNum)
