@@ -1,0 +1,21 @@
+PROCEDURE count():
+	DECLARE odd : INTEGER
+	DECLARE even : INTEGER
+	DECLARE num : INTEGER
+	odd <-- 0
+	even <-- 0
+	OUTPUT "Please enter first num"
+	INPUT num
+	WHILE num <> 99:
+		IF num % 2 = 1 THEN
+			odd <-- odd + 1
+		ELSE
+			even <-- even + 1
+		ENDIF
+		OUTPUT "Please enter next num"
+		INPUT num
+	ENDWHILE
+	OUTPUT "The number of odd is ", odd, " and even ", even
+ENDPROCEDURE
+
+CALL count()

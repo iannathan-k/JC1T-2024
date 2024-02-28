@@ -1,0 +1,81 @@
+DECLARE PI : REAL
+PI <-- 3.14
+
+FUNCTION circleArea(circleRadius : INTEGER)
+    DECLARE circleArea : REAL
+    circleArea <-- PI * circleRadius * circleRadius
+    RETURN circleArea
+ENDFUNCTION
+
+FUNCTION circlePer(circleRadius : INTEGER)
+    DECLARE circlePer : REAL
+    circlePer <-- 2 * PI * circleRadius
+    RETURN circlePer
+ENDFUNCTION
+
+FUNCTION rectArea(rectLen : INTEGER, rectBre : INTEGER)
+    DECLARE rectArea : INTEGER
+    rectArea <-- rectLen * rectBre
+    RETURN rectArea
+ENDFUNCTION
+
+FUNCTION rectPer(rectlen : INTEGER, rectBre : INTEGER)
+    DECLARE rectPer : INTEGER
+    rectPer <-- rectLen * 2 + rectBre * 2
+    RETURN rectPer
+ENDFUNCTION
+
+FUNCTION parrArea(parrLen : INTEGER, parrBre : INTEGER)
+    DECLARE parrArea : INTEGER
+    parrArea <-- parrLen * parrBre
+    RETURN parrArea
+ENDFUNCTION
+
+FUNCTION parrPer(parrLen : INTEGER, parrBre : INTEGER)
+    DECLARE parrPer : INTEGER
+    parrPer <-- parrLen * 2 + parrBre * 2
+    RETURN parrPer
+ENDFUNCTION
+
+FUNCTION triArea(triLen : INTEGER, triBre : INTEGER)
+    DECLARE triArea : INTEGER
+    triArea <-- 0.5 * triLen * triBre
+    RETURN triArea
+ENDFUNCTION
+
+FUNCTION triPer(triBre : INTEGER)
+    DECLARE triPer : INTEGER
+    triPer <-- triBre * 3
+    RETURN triPer
+ENDFUNCTION
+
+FUNCTION sphereVol(sphereRad : INTEGER)
+    DECLARE sphereVol : REAL
+    sphereVol <-- 4/3 * PI * sphereRad * sphereRad * sphereRad
+    RETURN sphereVol
+ENDFUNCTION
+
+DECLARE shape : STRING
+DECLARE val1 : INTEGER
+DECLARE val2 : INTEGER
+DECLARE area : REAL
+DECLARE per : REAL
+
+OUTPUT "Please input the shape to use"
+INPUT shape
+OUTPUT "Please input the first value"
+INPUT val1
+OUTPUT "Please input the second value, otherwise enter 0"
+INPUT val2
+
+area <-- 0
+per <-- 0
+
+CASE shape OF
+    "circle" : OUTPUT "Your shape circle has area ", circleArea(val1), " and perimeter ", circlePer(val1)
+    "rectangle" : OUTPUT "Your shape rectangle has area ", rectArea(val1, val2), " and perimeter ", rectPer(val1, val2)
+    "parallolagram" : OUTPUT "Your shape parallolagram has area ", parrArea(val1, val2), " and perimeter ", parrPer(val1, val2)
+    "triangle" : OUTPUT "Your shape triangle has area ", triArea(val1, val2), " and perimeter ", triPer(val1)
+    "circle" : OUTPUT "Your shape sphere has volume ", sphereVol(val1)
+    OTHERWISE OUTPUT "Error, shape not found"
+ENDCASE

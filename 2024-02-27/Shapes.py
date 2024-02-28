@@ -44,24 +44,9 @@ area = 0
 per = 0
 
 match shape:
-    case "circle":
-        area = circleArea(val1)
-        per = circlePer(val1)
-    case "rectangle":
-        area = rectArea(val1, val2)
-        per = rectPer(val1, val2)
-    case "parallolagram":
-        area = parrArea(val1, val2)
-        per = parrPer(val1, val2)
-    case "triangle":
-        area = triArea(val1, val2)
-        per = triPer(val1)
-    case "sphere":
-        area = sphereVol(val1)
-    case _:
-        print("Error, shape not found")
-
-if shape == "sphere":
-    print(f"You shape sphere has volume {area}")
-else:
-    print(f"Your shape {shape} has area {area} and perimeter {per}")
+    case "circle": print("Your shape circle has area", circleArea(val1), "and perimeter", circlePer(val1))
+    case "rectangle": print("Your shape rectangle has area", rectArea(val1, val2), "and perimeter", rectPer(val1, val2))
+    case "parallolagram": print("Your shape parallolagram has area", parrArea(val1, val2), "and perimeter", parrPer(val1, val2))
+    case "triangle": print("Your shape triangle has area", triArea(val1, val2), "and perimeter", triPer(val1))
+    case "sphere": print("Your shape sphere has volume", sphereVol(val1))
+    case _: print("Error, shape not found")

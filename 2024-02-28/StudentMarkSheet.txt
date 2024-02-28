@@ -1,0 +1,8 @@
+DECLARE studentNames : ARRAY[1:10] OF STRING
+DECLARE test1Scores : ARRAY[1:10] OF INTEGER
+DECLARE test2Scores : ARRAY[1:10] OF INTEGER
+DECLARE testsAvg : ARRAY[1:10] OF REAL
+
+FOR i <-- 1 TO 10
+    testsAvg[i] <-- (test1Scores[i] + test2Scores[i]) / 2
+NEXT i
