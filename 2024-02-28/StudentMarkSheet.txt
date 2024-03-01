@@ -3,6 +3,53 @@ DECLARE test1Scores : ARRAY[1:10] OF INTEGER
 DECLARE test2Scores : ARRAY[1:10] OF INTEGER
 DECLARE testsAvg : ARRAY[1:10] OF REAL
 
+DECLARE highest : INTEGER
+DECLARE highestName : STRING
+DECLARE lowest : INTEGER
+DECLARE lowestName : STRING
+DECLARE passed : INTEGER
+DECLARE failed : INTEGER
+
+highest <-- -1
+lowest <-- 101
+passed <-- 0
+failed <-- 0
+
 FOR i <-- 1 TO 10
     testsAvg[i] <-- (test1Scores[i] + test2Scores[i]) / 2
+
+    IF testsAvg[i] >= 50 THEN
+        passed <-- passed + 1
+    ELSE
+        failed <-- failed + 1
+    ENDIF
+
+    IF testsAvg[i] > highest THEN
+        highest <-- testsAvg[i]
+        highestName <-- studentNames[i]
+    ENDIF
 NEXT i
+
+highest = -1
+highestName = ""
+lowest = 101
+lowestName = ""
+passed = 0
+failed = 0
+
+if testsAvg[i] >= 50:
+        passed = passed + 1
+    else:
+        failed = failed + 1
+    
+    if testsAvg[i] > highest:
+        highest = testsAvg[i]
+        highestName = studentNames[i]
+    
+    if testsAvg[i] < lowest:
+        lowest = testsAvg[i]
+        lowestName = studentNames[i]
+
+print(f"the number of students who passed is {passed} and failed is {failed}")
+print(f"the highest scoring student is {highestName} at {highest}")
+print(f"the lowest scoring student is {lowestName} at {lowest}")
