@@ -28,28 +28,13 @@ FOR i <-- 1 TO 10
         highest <-- testsAvg[i]
         highestName <-- studentNames[i]
     ENDIF
+
+    IF testsAvg[i] > lowest THEN
+        lowest <-- testsAvg[i]
+        lowestName <-- studentNames[i]
+    ENDIF
 NEXT i
 
-highest = -1
-highestName = ""
-lowest = 101
-lowestName = ""
-passed = 0
-failed = 0
-
-if testsAvg[i] >= 50:
-        passed = passed + 1
-    else:
-        failed = failed + 1
-    
-    if testsAvg[i] > highest:
-        highest = testsAvg[i]
-        highestName = studentNames[i]
-    
-    if testsAvg[i] < lowest:
-        lowest = testsAvg[i]
-        lowestName = studentNames[i]
-
-print(f"the number of students who passed is {passed} and failed is {failed}")
-print(f"the highest scoring student is {highestName} at {highest}")
-print(f"the lowest scoring student is {lowestName} at {lowest}")
+OUTPUT "the number of students who passed is ", passed, " and failed is ", failed
+OUTPUT "the highest scoring student is ", highestName, " at ", highest
+OUTPUT "the lowest scoring student is ", lowestName, " at ", lowest
