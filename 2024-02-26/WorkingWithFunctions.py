@@ -8,13 +8,13 @@ secondNum = int(input("Enter second num: "))
 tempSum = addTwoNumbers(firstNum, secondNum)
 print(f"The sum of {firstNum} and {secondNum} is {tempSum}")
 
-# def fact(prod, num):
-#     prod = prod * num
-#     num -= 1
-#     if num == 0: 
-#         return prod
-#     else:
-#         return fact(prod, num)
+def factorial(prod, num):
+    prod = prod * num
+    num -= 1
+    if num == 0: 
+        return prod
+    else:
+        return factorial(prod, num)
 
 def fact(num):
     prod = 1
@@ -23,3 +23,4 @@ def fact(num):
     return prod
 
 print(fact(5))
+print(factorial(1, 5))

@@ -1,0 +1,2 @@
+myString = "ian"
+myChar = 'A'

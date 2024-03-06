@@ -6,24 +6,34 @@ ENDFUNCTION
 
 DECLARE firstNum : INTEGER
 DECLARE secondNum : INTEGER
+DECLARE tempSum : INTEGER
 
 OUTPUT "Enter first num: "
 INPUT firstNum
 OUTPUT "Enter second num: "
 INPUT secondNum
 
-tempSum = addTwoNumbers(firstNum, secondNum)
-print("The sum of ", firstNum, " and ", secondNum, " is, ", tempSum)
+tempSum <-- addTwoNumbers(firstNum, secondNum)
+OUTPUT "The sum of ", firstNum, " and ", secondNum, " is ", tempSum
 
-
+FUNCTION factorial(prod : INTEGER, num : INTEGER) RETURNS INTEGER
+    prod <-- prod * num
+    num <-- num - 1
+    IF num = 0 THEN
+        RETURN prod
+    ELSE
+        RETURN factorial(prod, num)
+    ENDIF
+ENDFUNCTION
 
 FUNCTION fact(num : INTEGER) RETURNS INTEGER
     DECLARE prod : INTEGER
     prod <-- 1
     FOR i <-- 1 TO num
-        prod = prod * i
+        prod <-- prod * i
     NEXT i
     RETURN prod
 ENDFUNCTION
 
-tempProd = fact(5)
+OUTPUT fact(5)
+OUTPUT factorial(1, 5)

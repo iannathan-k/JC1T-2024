@@ -1,0 +1,5 @@
+DECLARE myString : STRING
+DECLARE myChar : CHAR
+
+myString <-- "ian"
+myChar <-- 'A'

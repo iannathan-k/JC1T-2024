@@ -2,10 +2,17 @@ DECLARE Marks : ARRAY[1:10, 1:5] OF INTEGER
 
 FOR i <-- 1 TO 10
     FOR j <-- 1 TO 5
-        Marks[i][j] <-- i
+        Marks[i, j] <-- i
     NEXT j
 NEXT i
 
 FOR i <-- 1 TO 10
-    OUTPUT Marks[i][1]
+    OUTPUT Marks[i, 1]
+NEXT i
+
+DECLARE TestScores : ARRAY[0:4][0:1] OF INTEGER
+DECLARE StudentNames : ARRAY[0:4] OF STRING
+
+FOR i <-- 0 TO LENGTH(TestScores)
+    OUTPUT StudentNames[i], TestScores[i, 0], TestScores[i, 1]
 NEXT i

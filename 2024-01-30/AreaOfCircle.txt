@@ -1,6 +1,8 @@
 DECLARE Radius : REAL
 DECLARE Area : REAL
-CONSTANT PI : 3.14159 : REAL
+DECLARE PI : REAL
+
+PI <-- 3.14159
 
 OUTPUT "Input circle radius: "
 INPUT Radius
