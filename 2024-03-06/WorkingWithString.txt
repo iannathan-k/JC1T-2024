@@ -3,3 +3,9 @@ DECLARE myChar : CHAR
 
 myString <-- "ian"
 myChar <-- 'A'
+
+myString <-- myString + STR(myChar)
+OUTPUT myString
+OUTPUT MID(myString, 1, 3)
+OUTPUT LEFT(myString, 2)
+OUTPUT RIGHT(myString, 1)
